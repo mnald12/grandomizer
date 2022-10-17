@@ -206,5 +206,11 @@
 		.flex-left p{
 			font-size: 17px !important;
 		}
+		.flex-right li svg{
+			margin-right: 10px;
+		}
+		.logo-flex a{
+			margin: 10px;
+		}
 	}
 </style>

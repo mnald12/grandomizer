@@ -154,5 +154,8 @@
 		.card-container{
 			flex-wrap: wrap;
 		}
+		.card{
+			margin-bottom: 12px;
+		}
 	}
 </style>

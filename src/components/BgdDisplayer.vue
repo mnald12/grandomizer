@@ -29,6 +29,7 @@
 		.background-displayer{
 			width: 100%;
 			height: 220px;
+			margin-bottom: 12px;
 		}
 	}
 </style>
