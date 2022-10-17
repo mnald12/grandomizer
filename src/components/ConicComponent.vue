@@ -235,4 +235,9 @@ export default {
 		transition: 0.80s;
 		color: aliceblue;
 	}
+	@media (max-width : 900px){
+		.box{
+			margin-top: 12px;
+		}
+	}
 </style>
