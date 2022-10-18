@@ -51,10 +51,10 @@ export default {
     else this.desktop = false
   },
   mounted() {
-    window.addEventListener("resize", this.reSize);
+    window.addEventListener("resize", this.reSize)
   },
   unmounted() {
-    window.removeEventListener("resize", this.reSize);
+    window.removeEventListener("resize", this.reSize)
   },
   methods: {
     reSize() {

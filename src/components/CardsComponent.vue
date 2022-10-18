@@ -8,7 +8,8 @@
 			<div class="card-text">
 				<h3>Linear Gradients</h3>
 				<p>A linear gradients is specified by two points, and a color at each point. The colors along the line through those points are calculated using linear interpolation, then extended perpendicular to that line. In digital imaging systems, colors are typically interpolated in an RGB color space, often using gamma compressed RGB color values, as opposed to linear. CSS and SVG both support linear gradients. - <a target="/wiki" href="https://en.wikipedia.org/wiki/Color_gradient">wikipedia</a></p>
-				<button @click="changeLinks('linear')">Go now</button>
+				<button v-if="desktop" @click="changeLinks('linear')">Go now</button>
+				<button v-else @click="changeLinks2('linear')">Go now</button>
 			</div>
 		</div>
 		<div class="card">
@@ -16,7 +17,8 @@
 			<div class="card-text">
 				<h3>Radial Gradients</h3>
 				<p>A radial gradient is specified as a circle that has one color at the edge and another at the center. Colors are calculated by linear interpolation based on distance from the center. This can be used to approximate the diffuse reflection of light from a point source by a sphere.[citation needed] Both CSS and SVG support radial gradients. - <a target="/wiki" href="https://en.wikipedia.org/wiki/Color_gradient">wikipedia</a></p>
-				<button @click="changeLinks('radial')">Go now</button>
+				<button v-if="desktop" @click="changeLinks('radial')">Go now</button>
+				<button v-else @click="changeLinks2('radial')">Go now</button>
 			</div>
 		</div>
 		<div class="card">
@@ -24,7 +26,8 @@
 			<div class="card-text">
 				<h3>Conic Gradients</h3>
 				<p>Conic or conical gradients are gradients with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels. - <a target="/wiki" href="https://en.wikipedia.org/wiki/Color_gradient">wikipedia</a></p>
-				<button @click="changeLinks('conic')">Go now</button>
+				<button v-if="desktop" @click="changeLinks('conic')">Go now</button>
+				<button v-else @click="changeLinks2('conic')">Go now</button>
 			</div>
 		</div>
 	</div>
@@ -43,9 +46,37 @@
 				linear : this.gradientData[0],
 				radial : this.gradientData[1],
 				conic : this.gradientData[2],
+				desktop : true,
+				width : 0,
+				height : 0,
+				isOpens : false
 			}
 		},
+		beforeMount(){
+			this.width = window.innerWidth
+			this.height = window.innerHeight
+			if(this.width > 900) this.desktop = true
+				else this.desktop = false
+			},
+		mounted() {
+			window.addEventListener("resize", this.reSize);
+		},
+		unmounted() {
+			window.removeEventListener("resize", this.reSize);
+		},
 		methods : {
+			reSize() {
+				this.width = window.innerWidth
+				this.height = window.innerHeight
+				if(this.width > 900){
+					this.desktop = true
+					this.isOpens = false
+				}
+				else this.desktop = false
+			},openMenu(){
+				if(this.isOpens == false) this.isOpens = true
+				else this.isOpens = false
+			},
 			changeLinks(links){
 				let link1 = document.getElementById('a1')
 				let link2 = document.getElementById('a2')
@@ -77,6 +108,10 @@
 				}
 				this.$emit('change-link', links)
 			},
+			changeLinks2(links){
+				this.$emit('change-link', links)
+				this.isOpens = false
+			}
 		}
 	}
 	
