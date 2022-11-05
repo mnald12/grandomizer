@@ -30,7 +30,6 @@
 		.background-displayer{
 			width: 100%;
 			height: 200px;
-			margin-bottom: 12px;
 		}
 	}
 </style>
