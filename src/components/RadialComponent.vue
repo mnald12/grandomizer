@@ -244,14 +244,5 @@ export default {
 		.box{
 			margin-top: 12px;
 		}
-		.box .content-action button svg{
-			margin-left: 10px;
-		}
-		.box .content-action .minus{
-			margin-left: 10px;
-		}
-		.box .content-action .plus{
-			margin-left: 10px;
-		}
 	}
 </style>

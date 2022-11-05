@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<div class="content-text">
-			<h1>A Gradient Tool that you will Love</h1>
+			<h1>CSS Gradient Tool that you will Love</h1>
 		</div>
 	</div>
     </Transition>

@@ -238,7 +238,7 @@ export default {
 	}
 	@media (max-width : 900px){
 		.box{
-			margin-top: 12px;
+			margin-top: 10px;
 		}
 	}
 </style>

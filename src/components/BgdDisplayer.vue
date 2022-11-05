@@ -22,13 +22,14 @@
 <style scoped>
 	.background-displayer{
 		width: 60%;
-		height: 460px;
+		height: auto;
+		max-height: 480px;
 		border-radius: 6px;
 	}
 	@media (max-width : 900px){
 		.background-displayer{
 			width: 100%;
-			height: 220px;
+			height: 200px;
 			margin-bottom: 12px;
 		}
 	}

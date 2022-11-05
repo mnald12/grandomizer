@@ -182,7 +182,7 @@
 	.background-controler{
 		width: 40%;
 		height: auto;
-		padding: 12px;
+		padding: 10px;
 		background: linear-gradient(to left, #5d3af7, #bf48e2);
 		border-radius: 6px;
 	}
@@ -206,7 +206,7 @@
 		cursor: pointer;
 		border-radius: 3px;
 		font-weight: bold;
-		padding: 6px 30px;
+		padding: 5px 30px;
 		margin: 10px auto;
 	}
 	.color-type-control .type-controler button.active{
@@ -238,7 +238,7 @@
 	.background-displayer-panel{
 		width: 100%;
 		height: auto;
-		padding: 10px;
+		padding: 8px;
 		background: aliceblue;
 		color: black;
 		display: flex;
@@ -254,7 +254,7 @@
 	.choose{
 		width: 100%;
 		height: auto;
-		padding: 10px;
+		padding: 8px;
 		background: #FFFFFF;
 		border-radius: 2px;
 		margin-top: 5px;
@@ -282,13 +282,13 @@
 	.options{
 		width: 100%;
 		height: auto;
-		padding: 12px;
+		padding: 10px;
 		background: linear-gradient(to right, #5d3af7, #bf48e2);
 		border-radius: 3px;
 	}
 	.options button{
 		width: 100%;
-		height: 40px;
+		height: 36px;
 		background: aliceblue;
 		border-radius: 3px;
 		border: none;
@@ -299,7 +299,7 @@
 	.color-count-controler{
 		width: 100%;
 		height: auto;
-		padding: 10px;
+		padding: 8px;
 		background: #FFFFFF;
 		border-radius: 2px;
 		margin-top: 5px;
@@ -317,8 +317,8 @@
 		color: white;
 		border: none;
 		outline: none;
-		width: 26px;
-		height: 26px;
+		width: 24px;
+		height: 24px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -333,8 +333,8 @@
 		color: white;
 		border: none;
 		outline: none;
-		width: 26px;
-		height: 26px;
+		width: 24px;
+		height: 24px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -346,7 +346,7 @@
 	}
 	.button-randomizer{
 		width: 100%;
-		height: 50px;
+		height: 46px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
